@@ -15,7 +15,7 @@ int? nullableValueType = 5; // Define nullable value type
 nullableValueType = null;   // Valid as type is nullable
 ```
 
-Accessing a member of a variable which value is `null` will compile fine, but result in a `NullReferenceException` being thrown at runtime:
+Accessing a member of a variable whose value is `null` will compile fine but will result in a `NullReferenceException` being thrown at runtime:
 
 ```csharp
 string sentence = null;
@@ -24,7 +24,7 @@ string sentence = null;
 sentence.Length;
 ```
 
-To counter this common type of mistake, C# 8 allows one to opt-into a feature that makes reference types non-nullable by default:
+To counter this common type of mistake, C# 8 allows one to opt into a feature that makes reference types non-nullable by default:
 
 ```csharp
 string nonNullableReferenceType = "book";
