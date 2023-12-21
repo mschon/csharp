@@ -15,16 +15,15 @@ A `for` loop consists of four parts:
 
 1. The initializer: executed once before entering the loop. Usually used to define variables used within the loop.
 2. The condition: executed before each loop iteration. The loop continues to execute while this evaluates to `true`.
-3. The iterator: execute after each loop iteration. Usually used to modify (often: increment/decrement) the loop variable(s).
-4. The body: the code that gets executed each loop iteration.
+3. The iterator: executed after each loop iteration. Usually used to modify (often: increment/decrement) the loop variable(s).
+4. The body: the code that gets executed on each loop iteration.
 
 ## for vs foreach loops
 
-In general [concept:csharp/foreach-loops]() are preferrable over `for` loops for the following reasons:
+In general, [concept:csharp/foreach-loops]() are preferable over `for` loops for the following reasons:
 
-- A `foreach` loop is guaranteed to iterate over _all_ values. With a `for` loop, it is easy to miss elements, for example due to an off-by-one error.
-- A `foreach` loop is more _declarative_, your code is communicating _what_ you want it to do, instead of a `for` loop that communicates _how_ you want to do it.
-- A `foreach` loop is foolproof, whereas with `for` loops it is easy to have an off-by-one error.
+- A `foreach` loop is guaranteed to iterate over _all_ values. With a `for` loop, it is easy to miss elements, for example due to an off-by-one error. A `foreach` loop is foolproof in this respect.
+- A `foreach` loop is more _declarative_. This means that your code communicates _what_ you want done. In contrast, a `for` loop is _imperative_, meaning that it communicates _how_ you want it done.
 - A `foreach` loop works on all collection types, including those that don't support using an indexer to access elements.
 
 To guarantee that a `foreach` loop will iterate over _all_ values, the compiler will not allow updating of a collection within a `foreach` loop:

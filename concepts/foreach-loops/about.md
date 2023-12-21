@@ -22,11 +22,10 @@ A `foreach` loop consists of three parts:
 
 ## for vs foreach loops
 
-However, generally a `foreach` loop is preferrable over a `for` loop for the following reasons:
+However, generally a `foreach` loop is preferable over a `for` loop for the following reasons:
 
-- A `foreach` loop is guaranteed to iterate over _all_ values. With a `for` loop, it is easy to miss elements, for example due to an off-by-one error.
-- A `foreach` loop is more _declarative_, your code is communicating _what_ you want it to do, instead of a `for` loop that communicates _how_ you want to do it.
-- A `foreach` loop is foolproof, whereas with `for` loops it is easy to have an off-by-one error.
+- A `foreach` loop is guaranteed to iterate over _all_ values. With a `for` loop, it is easy to miss elements, for example due to an off-by-one error. A `foreach` loop is foolproof in this respect.
+- A `foreach` loop is more _declarative_. This means that your code communicates _what_ you want done. In contrast, a `for` loop is _imperative_, meaning that it communicates _how_ you want it done.
 - A `foreach` loop works on all collection types, including those that don't support using an indexer to access elements.
 
 To guarantee that a `foreach` loop will iterate over _all_ values, the compiler will not allow updating of a collection within a `foreach` loop:
